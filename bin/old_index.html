@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function passvalues(){
+            var firstname = document.getElementById("username").value;
+            localStorage.setItem("textvalue", firstname)
+            return false;
+        }
+    </script>
+</head>
+<body>
+
+<form action="dashboard.html">
+    <input type="text" id="username">
+    <input type="text" id="password">
+    <input type="submit" value="Login" onclick="passvalues();">
+</form>
+
+
+
+</body>
+</html>

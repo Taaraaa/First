@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floral Whisper - Account Info</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <script src="https://kit.fontawesome.com/57e06f181c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <section id="header">
+        <a href="index.html"><img src="/img/header_logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="dashboard.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section id="product1">
+        <img src="/img/account_icon.png" alt="">
+        <h2 id="result"></h2>
+        <script>
+            document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+        </script>
+        &nbsp;
+        <p>This is your account page.</p>
+        <button class="btn"><a href="index.html">Logout</a></button>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

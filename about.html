@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floral Whisper</title>
+    <title>Floral Whisper - About Us</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <script src="https://kit.fontawesome.com/57e06f181c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,17 +15,24 @@
 
         <div>
             <ul id="navbar">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a class="active" href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li>|</li>
+                <li><a href="account.html">Hi, <span id="result"></span></a></li>
+                <script>
+                    document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+                </script>
+                <li><a href="index.html">Logout</a></li>
             </ul>
         </div>
 
     </section>
 
     <section id="product1">
+        <img src="/img/about_icon.png" alt="">
         <h2>About Us</h2>
         &nbsp;
         </p>
