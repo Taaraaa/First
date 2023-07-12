@@ -154,14 +154,21 @@ button.normal{
     padding-bottom: 15px;
 }
 #hero h1{
-    color: #088178;
+    color: #3b271e;
 }
 
 #hero button{
-    color: #088178;
+    width: 200px;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 45px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
-    font-weight: 700;
-    font-size: 15px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
 }
 
 #feature{
@@ -179,6 +186,7 @@ button.normal{
     border: 1px solid #cce7d0;
     border-radius: 4px;
     margin: 15px 0;
+    cursor: pointer;
 }
 
 #feature .fe-box:hover{
@@ -270,7 +278,7 @@ button.normal{
     margin: 15px 10px;
     transition: 0.2s ease;
     position: relative;
-    background-color: #f1f1f1;
+    background-color: #dfd7c6;
 }
 
 #product1 .pro:hover{

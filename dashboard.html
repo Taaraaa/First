@@ -38,10 +38,22 @@
         <h1>Summer Collection</h1>
         <h3>Blooming Moments, Delivered with Love!</h3>
         <p>Save more with coupons & up to 50% off</p>
-        <button>Shop Now</button>
+        <button id="shop_button" class="float-left submit-button" >Shop Now</button>
+
+        <script type="text/javascript">
+            document.getElementById("shop_button").onclick = function () {
+                location.href = "/shop.html";
+            };
+
+            function useCoupon(){
+            confirm("Do you want to use this coupon?\n\nTerms and Condition govern the use of any coupons issued \nFor the purpose of availing discounts or special offers on products. \nBy using the coupon, Users agree to comply with these T/C. \n\n Click 'OK' to apply this coupon.")
+            alert("Coupon applied!")
+            };
+        </script>
+
     </section>
 
-    <section id="feature" class="section-p1">
+    <section id="feature" class="section-p1" onclick="useCoupon();">
         <div class="fe-box">
             <img src="img/features/f1.png" alt="">
             <h6>Free Shipping</h6>
@@ -104,8 +116,8 @@
             <div class="pro">
                 <img src="/img/products/f4.png" alt="">
                 <div class="des">
-                    <span>Blooms Galore</span>
-                    <h5></h5>
+                    <span>Assorted</span>
+                    <h5>Blooms Galore</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
