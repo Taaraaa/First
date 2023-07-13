@@ -7,6 +7,11 @@
     <link rel="icon" type="image/x-icon" href="/img/favicon.png">
     <script src="https://kit.fontawesome.com/57e06f181c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        if (sessionStorage.getItem('AuthState') === null) {
+            window.open("accessdenied.html", "_self");
+        }
+    </script>
 </head>
 <body>
     

@@ -15,10 +15,11 @@
             var password_login = document.getElementById("password_login").value;
             var password_stored = localStorage.getItem("password");
             var session_username = username_login.charAt(0).toUpperCase()+username_login.slice(1);          
-
+            var sessionStorage;
 
             if (username_login == username_stored && password_login == password_stored){
                 localStorage.setItem("textvalue", session_username);
+                sessionStorage.setItem("AuthState", "Authenticated");
                 window.location.href="dashboard.html";
             }
             else{
