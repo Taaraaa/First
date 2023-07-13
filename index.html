@@ -9,17 +9,17 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <script>
+        console.log(sessionStorage.AuthState);
         function verify(){
             var username_login = document.getElementById("username_login").value;
             var username_stored = localStorage.getItem("username");
             var password_login = document.getElementById("password_login").value;
             var password_stored = localStorage.getItem("password");
-            var session_username = username_login.charAt(0).toUpperCase()+username_login.slice(1);          
-            var sessionStorage;
+            var session_username = username_login.charAt(0).toUpperCase()+username_login.slice(1);        
 
             if (username_login == username_stored && password_login == password_stored){
                 localStorage.setItem("textvalue", session_username);
-                sessionStorage.setItem("AuthState", "Authenticated");
+                sessionStorage.setItem("AuthState", "true");
                 window.location.href="dashboard.html";
             }
             else{

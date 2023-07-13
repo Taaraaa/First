@@ -8,8 +8,12 @@
     <script src="https://kit.fontawesome.com/57e06f181c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script>
-        if (sessionStorage.getItem('AuthState') === null) {
+        if (sessionStorage.getItem('AuthState') === "false") {
             window.open("accessdenied.html", "_self");
+        }
+        function unAuth(){
+            sessionStorage.setItem('AuthState', "false");
+            window.open("index.html", "_self");
         }
     </script>
 </head>
@@ -30,7 +34,7 @@
                 <script>
                     document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
                 </script>
-                <li><a href="index.html">Logout</a></li>
+                <li><a href="#" onclick="unAuth(); return false;">Logout</a></li>
 
 
             </ul>
