@@ -115,6 +115,7 @@ button.normal{
     transition: 0.3s ease;
 }
 
+
 #navbar li a:hover{
     color: #088178;
 }
@@ -221,7 +222,10 @@ button.normal{
 }
 
 #product1{
+    padding-top: 30px;
     text-align: center;
+    background: white;
+    border-radius: 100px;
 }
 
 #product1 img {
@@ -246,6 +250,24 @@ button.normal{
     font-size: 16px;
     color: #333;
     font-weight: 600;
+}
+#product1 .btn1 {
+    width: 200px;
+    height: 45px;
+    margin-top: 20px;
+    background: green;
+    border: none;
+    outline: none;
+    border-radius: 45px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+#product1 .btn1 a{
+    text-decoration: none;
+    color: #fff;
 }
 
 #product1 .btn a{
@@ -278,7 +300,7 @@ button.normal{
     margin: 15px 10px;
     transition: 0.2s ease;
     position: relative;
-    background-color: #dfd7c6;
+    background-color: #ffe7dd;
 }
 
 #product1 .pro:hover{
@@ -359,4 +381,81 @@ button.normal{
 #banner button:hover{
     background: #088178;
     color: #fff;
+}
+
+#prodetails {
+    display: flex;
+    margin-top: 20px;
+}
+
+#prodetails .single-pro-image{
+    width: 40%;
+    margin-right: 50px;
+}
+
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#prodetails .single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+}
+
+#prodetails .single-pro-details h4{
+    padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2{
+    font-size: 26px;
+}
+
+
+#prodetails .single-pro-details select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#prodetails .single-pro-details input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#prodetails .single-pro-details button{
+    background-color: #088178;
+    color: white;
+}
+
+
+#prodetails .single-pro-details input:focus{
+    outline: none;
+}
+
+#prodetails .single-pro-details span{
+    line-height: 25px;
+}
+
+.small-img-group h6{
+    text-align: center;
+}
+
+
+.cart-text{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.cart-item{
+    border-style: solid;
 }

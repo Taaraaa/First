@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Floral Whisper</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <script src="https://kit.fontawesome.com/57e06f181c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <section id="header">
+        <a href="dashboard.html"><img src="/img/header_logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a  href="dashboard.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li>|</li>
+                <li><a href="account.html">Hi, <span id="result"></span></a></li>
+                <script>
+                    document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+                </script>
+                <li><a href="index.html">Logout</a></li>
+
+
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="cart-text">
+            Your Cart
+        </h2>
+    </section>
+
+
+    <section id="prodetails" class="section-p1-cart">
+        <div class="single-pro-image">
+            <img src="img/products/f1.png" width="40%" id="main-image" alt="">
+                    </div>
+                </div>
+        </div>
+        <div class="single-pro-details">
+            <h6>Checkout</h6>
+            <h2>Hot Romance Boquet</h2>
+        <span>
+            The exquisite rose bouquet showcases the timeless beauty and enchanting elegance of roses in a captivating arrangement. It features a harmonious blend of lush greenery and an assortment of captivating roses, each blooming with its unique charm. The bouquet is expertly handcrafted to evoke emotions of love, romance, and admiration.
+        </span>
+        <h6></h6>
+        <button class="normal" onclick="orderAlert();">Order Now</button>
+
+
+        </div>
+
+    </section>
+
+    <script>
+        var MainImg = document.getElementById("main-image");
+        var smallimg = document.getElementsByClassName("small-img");
+        
+        smallimg[0].onclick =  function(){
+            MainImg.src = smallimg[0].src
+        }
+        smallimg[1].onclick =  function(){
+            MainImg.src = smallimg[1].src
+        }
+        smallimg[2].onclick =  function(){
+            MainImg.src = smallimg[2].src
+        }
+        smallimg[3].onclick =  function(){
+            MainImg.src = smallimg[3].src
+        }
+
+        function addToCartAlert(){
+            alert("Added to your cart")
+            confirm("Proceed to checkout?")
+            window.location.href='index.html'
+        }
+
+        function orderAlert(){
+            alert("Order placed.")
+            window.location.href='cart.html';
+        }
+    </script>
+</body>
+</html>

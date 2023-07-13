@@ -9,37 +9,49 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <script>
-        function passvalues(){
-            var firstname = document.getElementById("username").value;
-            localStorage.setItem("textvalue", firstname)
-            return false;
+        function verify(){
+            var username_login = document.getElementById("username_login").value;
+            var username_stored = localStorage.getItem("username");
+            var password_login = document.getElementById("password_login").value;
+            var password_stored = localStorage.getItem("password");
+            var session_username = username_login.charAt(0).toUpperCase()+username_login.slice(1);          
+
+
+            if (username_login == username_stored && password_login == password_stored){
+                localStorage.setItem("textvalue", session_username);
+                window.location.href="dashboard.html";
+            }
+            else{
+                alert("Incorrect Credentials")
+                window.location.href="index.html";
+            }
+        return false;
         }
     </script>
 
 </head>
 <body>
     <div class="wrapper">
-        <form action="dashboard.html">
+        <form>
 
             <img src="/img/logo_white.png" alt="">
 
             <div class="input-box">
-                <input type="text" placeholder="Username" id="username">
+                <input type="text" placeholder="Username" id="username_login">
                 <i class='bx bxs-user'></i>
             </div>
 
             <div class="input-box">
-                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Password" id="password_login" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
 
             <div class="remember-forgot">
                 <label><input type="checkbox">Remember me</label>
-                <a href="#">Forgot password?</a>
+                <a href="forgot_password.html">Forgot password?</a>
             </div>
 
-            <button type="submit" class="btn" onclick="passvalues();">Login</button>
-            
+            <button type="reset" class="btn" onclick="verify();">Login</button>
             <div class="register-link">
                 <p>Don't have an account? <a href="create_account.html">Register</a></p>
             </div>
