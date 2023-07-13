@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Floral Whisper</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <script src="https://kit.fontawesome.com/57e06f181c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <section id="header">
+        <a href="index.html"><img src="/img/header_logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a class="active" href="dashboard.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li>|</li>
+                <li><a href="account.html">Hi, <span id="result"></span></a></li>
+                <script>
+                    document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+                </script>
+                <li><a href="index.html">Logout</a></li>
+
+
+            </ul>
+        </div>
+
+    </section>
+
+    <section id="pro-details" class="section-p1">
+        
+    </section>
+
+    <section id="banner" class="section-m1">
+        <h4>Winter Collection</h4>
+        <h2>Fantasia: Where Nature's Whimsy Unfolds!</h2>
+        <button class="normal">Check it Out!</button>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
