@@ -11,7 +11,7 @@
     <script>
         var AuthState = "false";
         sessionStorage.setItem("AuthState", "false");
-        console.log(sessionStorage.AuthState);
+        //console.log(sessionStorage.AuthState);
         function verify(){
             var username_login = document.getElementById("username_login").value;            
             var username_stored = localStorage.getItem("username");
@@ -22,9 +22,19 @@
             var password_login = document.getElementById("password_login").value;
             var password_stored = localStorage.getItem("password");
 
-            var session_username = username_stored.charAt(0).toUpperCase()+username_stored.slice(1);        
 
-            if (username_login == username_stored || email_login ==email_login && password_login == password_stored){
+            if(username_stored != null){
+                var session_username = username_stored.charAt(0).toUpperCase()+username_stored.slice(1);  
+            }
+                  
+
+            //console.log(localStorage.getItem('username'));
+            if (localStorage.getItem("username") == null){
+                alert("Please create an account.")
+                window.location.href="index.html";
+            }
+            else if ((username_login == username_stored || email_login == email_stored) && password_login == password_stored){
+                alert("Login successful")
                 localStorage.setItem("textvalue", session_username);
                 sessionStorage.setItem("AuthState", "true");
                 window.location.href="dashboard.html";
