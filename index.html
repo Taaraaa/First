@@ -13,13 +13,18 @@
         sessionStorage.setItem("AuthState", "false");
         console.log(sessionStorage.AuthState);
         function verify(){
-            var username_login = document.getElementById("username_login").value;
+            var username_login = document.getElementById("username_login").value;            
             var username_stored = localStorage.getItem("username");
+
+            var email_login = document.getElementById("username_login").value;
+            var email_stored = localStorage.getItem("email");
+
             var password_login = document.getElementById("password_login").value;
             var password_stored = localStorage.getItem("password");
-            var session_username = username_login.charAt(0).toUpperCase()+username_login.slice(1);        
 
-            if (username_login == username_stored && password_login == password_stored){
+            var session_username = username_stored.charAt(0).toUpperCase()+username_stored.slice(1);        
+
+            if (username_login == username_stored || email_login ==email_login && password_login == password_stored){
                 localStorage.setItem("textvalue", session_username);
                 sessionStorage.setItem("AuthState", "true");
                 window.location.href="dashboard.html";
@@ -29,6 +34,10 @@
                 window.location.href="index.html";
             }
         return false;
+        }
+        function clearlocal(){
+            localStorage.clear();
+            alert("All accounts have been cleared.")
         }
     </script>
 
@@ -40,7 +49,7 @@
             <img src="/img/logo_white.png" alt="">
 
             <div class="input-box">
-                <input type="text" placeholder="Username" id="username_login">
+                <input type="text" placeholder="Username or Email" id="username_login">
                 <i class='bx bxs-user'></i>
             </div>
 
@@ -57,6 +66,7 @@
             <button type="reset" class="btn" onclick="verify();">Login</button>
             <div class="register-link">
                 <p>Don't have an account? <a href="create_account.html">Register</a></p>
+                <p style="margin-top: 20px;"><a href="#" onclick="clearlocal();">Sign out of all account.</a></p>
             </div>
         </form>
     </div>

@@ -17,6 +17,14 @@
             sessionStorage.setItem('AuthState', "false");
             window.open("index.html", "_self");
         }
+        function useCoupon(){
+            sessionStorage.setItem('couponState', "Active Coupon");
+            console.log(sessionStorage.getItem('couponState'));
+            confirm("Do you want to use this coupon?\n\nTerms and Condition govern the use of any coupons issued \nFor the purpose of availing discounts or special offers on products. \nBy using the coupon, Users agree to comply with these T/C. \n\n Click 'OK' to apply this coupon.")
+            alert("Coupon applied!")
+            };
+        
+        
     </script>
 </head>
 <body>
@@ -55,11 +63,6 @@
             document.getElementById("shop_button").onclick = function () {
                 location.href = "/shop.html";
             };
-
-            function useCoupon(){
-            confirm("Do you want to use this coupon?\n\nTerms and Condition govern the use of any coupons issued \nFor the purpose of availing discounts or special offers on products. \nBy using the coupon, Users agree to comply with these T/C. \n\n Click 'OK' to apply this coupon.")
-            alert("Coupon applied!")
-            };
         </script>
 
     </section>
@@ -69,6 +72,7 @@
             <img src="img/features/f1.png" alt="">
             <h6>Free Shipping</h6>
         </div>
+
         <div class="fe-box">
             <img src="img/features/f2.png" alt="">
             <h6>20% Off</h6>
